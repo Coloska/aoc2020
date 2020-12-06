@@ -14,12 +14,13 @@ const day2v2 = () => {
     let index = 0;
     input.forEach((row) => {
         let password = row[3].split("")
-        !((password[parseInt(row[0])-1] === row[2]) === (password[parseInt(row[1])-1] === row[2])) ? index++ : false;
         // let characterOne = password[parseInt(row[0])-1];
         // let characterTwo = password[parseInt(row[1])-1];
         // let charOneTest = password[parseInt(row[0])-1] === row[2];
         // let charTwoTest = password[parseInt(row[1])-1] === row[2]
         // !(charOneTest === charTwoTest) ? index = index + 1 : false;
+        // looks better on one line :D
+        !((password[parseInt(row[0])-1] === row[2]) === (password[parseInt(row[1])-1] === row[2])) ? index++ : false;
     })
     return index;
 }
